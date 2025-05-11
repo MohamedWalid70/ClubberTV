@@ -1,0 +1,843 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ClubberTV",
+    "version": "1.0"
+  },
+  "paths": {
+    "/v1/clubber-tv/Auth/user-in": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Auth/admin-in": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Auth/super-admin-in": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.AuthDtos.AuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Matches/new": {
+      "post": {
+        "tags": [
+          "Matches"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.AddedMatchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.AddedMatchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.AddedMatchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Matches/all": {
+      "get": {
+        "tags": [
+          "Matches"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Matches/specific-match/{id}": {
+      "get": {
+        "tags": [
+          "Matches"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Matches"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Matches/match-to-be-updated": {
+      "patch": {
+        "tags": [
+          "Matches"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.MatchOperationsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.MatchOperationsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.MatchOperationsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Playlists/addition": {
+      "post": {
+        "tags": [
+          "Playlists"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Playlists/all": {
+      "get": {
+        "tags": [
+          "Playlists"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Playlists/specific-playlist/{id}": {
+      "get": {
+        "tags": [
+          "Playlists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Playlists/specific-playlist-item": {
+      "delete": {
+        "tags": [
+          "Playlists"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.Core.Entities.PlaylistItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.Core.Entities.PlaylistItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.Core.Entities.PlaylistItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/new-user": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.RegisteredUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.RegisteredUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.RegisteredUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/new-admin": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.RegisteredUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.RegisteredUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.RegisteredUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/all-users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/all-admins-and-users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/specific-user/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/admin-modification": {
+      "patch": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.UpdatedUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.UpdatedUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.UpdatedUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/super-admin-modification": {
+      "patch": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.UpdatedUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.UpdatedUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.UpdatedUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/user-modification": {
+      "patch": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.ModifiedUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.ModifiedUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClubberTV.DTOs.UserDtos.ModifiedUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Users/specific-admin-or-user/{id}": {
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ClubberTV.Core.Entities.PlaylistItem": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "matchId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClubberTV.Core.Types.Types-Status": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ClubberTV.DTOs.AuthDtos.AuthDto": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "maxLength": 40,
+            "minLength": 6,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClubberTV.DTOs.MatchDtos.AddedMatchDto": {
+        "required": [
+          "competition",
+          "date",
+          "duration",
+          "status",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "competition": {
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ClubberTV.Core.Types.Types-Status"
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClubberTV.DTOs.MatchDtos.MatchOperationsDto": {
+        "required": [
+          "competition",
+          "date",
+          "duration",
+          "status",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "competition": {
+            "maxLength": 40,
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ClubberTV.Core.Types.Types-Status"
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations": {
+        "required": [
+          "matchId",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "matchId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClubberTV.DTOs.UserDtos.ModifiedUserDto": {
+        "required": [
+          "email",
+          "name",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 35,
+            "minLength": 2,
+            "pattern": "^[A-Za-z\\s]+$",
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "maxLength": 40,
+            "minLength": 6,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$",
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "format": "tel",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClubberTV.DTOs.UserDtos.RegisteredUserDto": {
+        "required": [
+          "email",
+          "name",
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "maxLength": 20,
+            "minLength": 3,
+            "pattern": "[a-zA-Z0-9_]+",
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "maxLength": 35,
+            "minLength": 2,
+            "pattern": "^[A-Za-z\\s]+$",
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "maxLength": 40,
+            "minLength": 6,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$",
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "format": "tel",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClubberTV.DTOs.UserDtos.UpdatedUserDto": {
+        "required": [
+          "email",
+          "id",
+          "name",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "maxLength": 35,
+            "minLength": 2,
+            "pattern": "^[A-Za-z\\s]+$",
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "maxLength": 40,
+            "minLength": 6,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$",
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "format": "tel",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter your JWT token here",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

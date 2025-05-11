@@ -1,0 +1,330 @@
+[
+  {
+    "ContainingType": "ClubberTV.Controllers.AuthController",
+    "Method": "AdminLogin",
+    "RelativePath": "v1/clubber-tv/Auth/admin-in",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredentials",
+        "Type": "ClubberTV.DTOs.AuthDtos.AuthDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.AuthController",
+    "Method": "SuperAdminLogin",
+    "RelativePath": "v1/clubber-tv/Auth/super-admin-in",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredentials",
+        "Type": "ClubberTV.DTOs.AuthDtos.AuthDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "v1/clubber-tv/Auth/user-in",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCredentials",
+        "Type": "ClubberTV.DTOs.AuthDtos.AuthDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.MatchesController",
+    "Method": "GetMatches",
+    "RelativePath": "v1/clubber-tv/Matches/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.MatchesController",
+    "Method": "EditMatch",
+    "RelativePath": "v1/clubber-tv/Matches/match-to-be-updated",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matchInfo",
+        "Type": "ClubberTV.DTOs.MatchDtos.MatchOperationsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.MatchesController",
+    "Method": "AddMatch",
+    "RelativePath": "v1/clubber-tv/Matches/new",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matchInfo",
+        "Type": "ClubberTV.DTOs.MatchDtos.AddedMatchDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.MatchesController",
+    "Method": "GetMatch",
+    "RelativePath": "v1/clubber-tv/Matches/specific-match/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.MatchesController",
+    "Method": "RemoveMatch",
+    "RelativePath": "v1/clubber-tv/Matches/specific-match/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.PlaylistsController",
+    "Method": "AddPlaylistItem",
+    "RelativePath": "v1/clubber-tv/Playlists/addition",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playlistItem",
+        "Type": "ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.PlaylistsController",
+    "Method": "GetPlaylistItems",
+    "RelativePath": "v1/clubber-tv/Playlists/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.PlaylistsController",
+    "Method": "RemovePlaylistItem",
+    "RelativePath": "v1/clubber-tv/Playlists/specific-playlist-item",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playlistItem",
+        "Type": "ClubberTV.Core.Entities.PlaylistItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.PlaylistsController",
+    "Method": "GetUserPlaylist",
+    "RelativePath": "v1/clubber-tv/Playlists/specific-playlist/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "EditUserByAdminPrivilege",
+    "RelativePath": "v1/clubber-tv/Users/admin-modification",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "ClubberTV.DTOs.UserDtos.UpdatedUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "GetUsers",
+    "RelativePath": "v1/clubber-tv/Users/all-admins-and-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "GetUsersByAdminPrivilege",
+    "RelativePath": "v1/clubber-tv/Users/all-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "AddAdmin",
+    "RelativePath": "v1/clubber-tv/Users/new-admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "ClubberTV.DTOs.UserDtos.RegisteredUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "AddUser",
+    "RelativePath": "v1/clubber-tv/Users/new-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "ClubberTV.DTOs.UserDtos.RegisteredUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "RemoveUserBySuperAdminPrivilege",
+    "RelativePath": "v1/clubber-tv/Users/specific-admin-or-user/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "GetUser",
+    "RelativePath": "v1/clubber-tv/Users/specific-user/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "RemoveUserByAdminPrivilege",
+    "RelativePath": "v1/clubber-tv/Users/specific-user/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "EditUserBySuperAdminPrivilege",
+    "RelativePath": "v1/clubber-tv/Users/super-admin-modification",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "ClubberTV.DTOs.UserDtos.UpdatedUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClubberTV.Controllers.UsersController",
+    "Method": "UpdateUserByLoggedInPrivilege",
+    "RelativePath": "v1/clubber-tv/Users/user-modification",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "ClubberTV.DTOs.UserDtos.ModifiedUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

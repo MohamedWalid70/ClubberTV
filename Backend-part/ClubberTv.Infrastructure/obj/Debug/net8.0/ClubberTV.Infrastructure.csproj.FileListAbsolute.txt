@@ -1,0 +1,17 @@
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\bin\Debug\net8.0\ClubberTV.Infrastructure.deps.json
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\bin\Debug\net8.0\ClubberTV.Infrastructure.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\bin\Debug\net8.0\ClubberTV.Infrastructure.pdb
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\bin\Debug\net8.0\ClubberTV.Core.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\bin\Debug\net8.0\ClubberTV.Core.pdb
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.AssemblyInfo.cs
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberT.A6348AE2.Up2Date
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\refint\ClubberTV.Infrastructure.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.pdb
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ref\ClubberTV.Infrastructure.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\bin\Debug\net8.0\ClubberTV.Infrastructure.runtimeconfig.json
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Infrastructure\obj\Debug\net8.0\ClubberTV.Infrastructure.genruntimeconfig.cache

@@ -1,0 +1,72 @@
+<div class="p-5 min-vh-100 bg-light">
+  <div class="row mb-5">
+    <div class="col-lg-8">
+      <h1 class="display-4 fw-bold text-gradient">My Playlist</h1>
+      <p class="lead text-muted">All matches you have added to your playlist appear here.</p>
+    </div>
+    <div class="col-lg-4 d-flex align-items-end">
+      <div class="input-group">
+        <span class="input-group-text bg-white border-end-0">
+          <i class="bi bi-search"></i>
+        </span>
+        <input
+          type="text"
+          [(ngModel)]="searchQuery"
+          (input)="searchMatches()"
+          class="form-control border-start-0"
+          placeholder="Search matches in playlist..."
+        />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="matches.length > 0; else emptyPlaylist">
+    <div class="row justify-content-center">
+      <div class="col-md-11">
+        <div *ngFor="let match of matches" class="card mb-4 border-0 position-relative overflow-hidden match-card">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-5 p-0">
+              <div class="position-relative h-100 w-100" style="min-height: 180px;">
+                <img [src]="match.thumbnail" class="img-fluid h-100 w-100 object-fit-cover" alt="Match Thumbnail" />
+                <span
+                  class="badge position-absolute top-0 start-0 m-3 px-3 py-2"
+                  [ngClass]="{
+                    'bg-danger': match.status === 'Live',
+                    'bg-secondary': match.status === 'Replay'
+                  }"
+                  style="border-radius: 0.5rem; font-weight: 500;"
+                  >{{ match.status }}</span
+                >
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="card-body py-4 px-4">
+                <h4 class="card-title fw-bold mb-2">{{ match.title }}</h4>
+                <p class="card-text text-muted mb-2">{{ match.league }}</p>
+                <p class="card-text date-time mb-3">
+                  <i class="bi bi-calendar-event me-2"></i>{{ match.dateTime | date:'medium' }}
+                </p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary btn-lg rounded-pill" (click)="watchMatch(match.id)">
+                    <i class="bi bi-play-fill me-2"></i>Watch Now
+                  </button>
+                  <button class="btn btn-outline-danger btn-lg rounded-pill" (click)="removeFromPlaylist(match.id)">
+                    <i class="bi bi-x-circle me-2"></i>Remove from Playlist
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyPlaylist>
+    <div class="text-center py-5">
+      <i class="bi bi-inbox display-1 text-muted"></i>
+      <h3 class="mt-3">No Matches in Playlist</h3>
+      <p class="text-muted">Add matches to your playlist to see them here.</p>
+    </div>
+  </ng-template>
+</div> 

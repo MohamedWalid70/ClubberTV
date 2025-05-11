@@ -1,0 +1,116 @@
+<div class="signup-container">
+  <div class="signup-card">
+    <div class="signup-header">
+      <h1 class="text-gradient">Create Account</h1>
+      <p class="text-muted">Join our community of problem solvers</p>
+    </div>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bi bi-person"></i>
+          </span>
+          <input 
+            type="text" 
+            id="username" 
+            formControlName="username" 
+            class="form-control" 
+            placeholder="Enter your username"
+          >
+        </div>
+        <div class="error-message" *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched">
+          Username is required and must be at least 3 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bi bi-envelope"></i>
+          </span>
+          <input 
+            type="email" 
+            id="email" 
+            formControlName="email" 
+            class="form-control" 
+            placeholder="Enter your email"
+          >
+        </div>
+        <div class="error-message" *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+          Please enter a valid email address
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bi bi-lock"></i>
+          </span>
+          <input 
+            type="password" 
+            id="password" 
+            formControlName="password" 
+            class="form-control" 
+            placeholder="Enter your password"
+          >
+        </div>
+        @if((signupForm.get('password')?.hasError('minLength') || signupForm.get('password')?.hasError('required')) && signupForm.get('password')?.touched){
+          <div class="error-message">
+            Password must be at least 6 characters
+          </div>
+        }
+        @if(signupForm.get('password')?.hasError('pattern') && signupForm.get('password')?.touched){
+          <div class="error-message">
+            Password must contain at least 1 uppercase character, 1 lowercase character and 1 number
+          </div>
+        }
+      </div>
+
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bi bi-lock-fill"></i>
+          </span>
+          <input 
+            type="password" 
+            id="confirmPassword" 
+            formControlName="confirmPassword" 
+            class="form-control" 
+            placeholder="Confirm your password"
+          >
+        </div>
+        <div class="error-message" *ngIf="signupForm.hasError('mismatch') && signupForm.get('confirmPassword')?.touched">
+          Passwords do not match
+        </div>
+      </div>
+
+      <button 
+        type="submit" 
+        class="btn btn-primary w-100" 
+        [disabled]="signupForm.invalid || isLoading">
+
+        
+      @if(!isLoading) {
+        <span>Sign Up</span>
+      } @else {
+        <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        }
+      </button>
+
+      <div class="text-center mt-3">
+        <p class="mb-0">
+          Already have an account? 
+          <a routerLink="/login" class="text-primary">Login</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div> 

@@ -1,0 +1,95 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "tags": ["Array", "Hash Table"],
+      "solvedCount": 1500,
+      "totalAttempts": 2000,
+      "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.",
+      "examples": [
+        {
+          "input": "nums = [2,7,11,15], target = 9",
+          "output": "[0,1]",
+          "explanation": "Because nums[0] + nums[1] == 9, we return [0, 1]."
+        }
+      ],
+      "constraints": [
+        "2 <= nums.Length <= 10^4",
+        "-10^9 <= nums[i] <= 10^9",
+        "-10^9 <= target <= 10^9",
+        "Only one valid answer exists."
+      ],
+      "initialCode": "public class Solution {\n    public int[] TwoSum(int[] nums, int target) {\n        // Your code here\n    }\n}"
+    },
+    {
+      "id": 2,
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "tags": ["Linked List", "Math"],
+      "solvedCount": 1200,
+      "totalAttempts": 1800,
+      "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
+      "examples": [
+        {
+          "input": "l1 = [2,4,3], l2 = [5,6,4]",
+          "output": "[7,0,8]",
+          "explanation": "342 + 465 = 807."
+        }
+      ],
+      "constraints": [
+        "The number of nodes in each linked list is in the range [1, 100].",
+        "0 <= Node.val <= 9",
+        "It is guaranteed that the list represents a number that does not have leading zeros."
+      ],
+      "initialCode": "public class Solution {\n    public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {\n        // Your code here\n    }\n}"
+    },
+    {
+      "id": 3,
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "tags": ["Hash Table", "String", "Sliding Window"],
+      "solvedCount": 1000,
+      "totalAttempts": 1500,
+      "description": "Given a string s, find the length of the longest substring without repeating characters.",
+      "examples": [
+        {
+          "input": "s = \"abcabcbb\"",
+          "output": "3",
+          "explanation": "The answer is \"abc\", with the length of 3."
+        }
+      ],
+      "constraints": [
+        "0 <= s.Length <= 5 * 10^4",
+        "s consists of English letters, digits, symbols and spaces."
+      ],
+      "initialCode": "public class Solution {\n    public int LengthOfLongestSubstring(string s) {\n        // Your code here\n    }\n}"
+    },
+    {
+      "id": 4,
+      "title": "Median of Two Sorted Arrays",
+      "difficulty": "Hard",
+      "tags": ["Array", "Binary Search", "Divide and Conquer"],
+      "solvedCount": 800,
+      "totalAttempts": 1200,
+      "description": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.",
+      "examples": [
+        {
+          "input": "nums1 = [1,3], nums2 = [2]",
+          "output": "2.00000",
+          "explanation": "Merged array = [1,2,3] and median is 2."
+        }
+      ],
+      "constraints": [
+        "nums1.Length == m",
+        "nums2.Length == n",
+        "0 <= m <= 1000",
+        "0 <= n <= 1000",
+        "1 <= m + n <= 2000",
+        "-10^6 <= nums1[i], nums2[i] <= 10^6"
+      ],
+      "initialCode": "public class Solution {\n    public double FindMedianSortedArrays(int[] nums1, int[] nums2) {\n        // Your code here\n    }\n}"
+    }
+  ]
+} 

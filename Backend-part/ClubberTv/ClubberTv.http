@@ -1,0 +1,6 @@
+@ClubberTV_HostAddress = http://localhost:5115
+
+GET {{ClubberTV_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

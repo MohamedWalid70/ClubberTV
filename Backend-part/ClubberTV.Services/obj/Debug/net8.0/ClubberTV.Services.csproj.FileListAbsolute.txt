@@ -1,0 +1,15 @@
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\bin\Debug\net8.0\ClubberTV.Services.deps.json
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\bin\Debug\net8.0\ClubberTV.Services.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\bin\Debug\net8.0\ClubberTV.Services.pdb
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\bin\Debug\net8.0\ClubberTV.Core.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\bin\Debug\net8.0\ClubberTV.Core.pdb
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberTV.Services.csproj.AssemblyReference.cache
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberTV.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberTV.Services.AssemblyInfoInputs.cache
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberTV.Services.AssemblyInfo.cs
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberTV.Services.csproj.CoreCompileInputs.cache
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberT.F55272AE.Up2Date
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberTV.Services.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\refint\ClubberTV.Services.dll
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ClubberTV.Services.pdb
+C:\Users\MW-PC\source\repos\HiringQuest\ClubberTV.Services\obj\Debug\net8.0\ref\ClubberTV.Services.dll
