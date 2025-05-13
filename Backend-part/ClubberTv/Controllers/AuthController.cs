@@ -4,6 +4,9 @@ using ClubberTV.Infrastructure.Security;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ClubberTV.DTOs.AuthDtos;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace ClubberTV.Controllers
 {
@@ -13,10 +16,12 @@ namespace ClubberTV.Controllers
     {
         IUserServices _userServices;
         IConfiguration _configuration;
-        public AuthController(IUserServices userServices, IConfiguration configuration)
+        IClaimServices _claimServices;
+        public AuthController(IUserServices userServices, IConfiguration configuration, IClaimServices claimServices)
         {
             _userServices = userServices;
             _configuration = configuration;
+            _claimServices = claimServices;
         }
 
         [HttpPost("user-in")]
@@ -31,7 +36,7 @@ namespace ClubberTV.Controllers
 
             if (!user.Role.Equals("User"))
             {
-                return BadRequest("Unauthorized Access");
+                return Unauthorized("Unauthorized Access");
             }
 
             string password = await Cryptography.GetPasswordHash(userCredentials.Password);
@@ -46,7 +51,8 @@ namespace ClubberTV.Controllers
             AuthResponseDto authResponseDto = new()
             {
                 Name = user.Name,
-                Token = jwtGenerator.Generate(user)
+                Token = jwtGenerator.Generate(user),
+                Role = user.Role
             };
 
             return Ok(authResponseDto);
@@ -64,7 +70,7 @@ namespace ClubberTV.Controllers
 
             if (!user.Role.Equals("Admin"))
             {
-                return BadRequest("Unauthorized Access");
+                return Unauthorized("Unauthorized Access");
             }
 
             string password = await Cryptography.GetPasswordHash(userCredentials.Password);
@@ -79,7 +85,8 @@ namespace ClubberTV.Controllers
             AuthResponseDto authResponseDto = new()
             {
                 Name = user.Name,
-                Token = jwtGenerator.Generate(user)
+                Token = jwtGenerator.Generate(user),
+                Role = user.Role
             };
 
             return Ok(authResponseDto);
@@ -98,7 +105,7 @@ namespace ClubberTV.Controllers
 
             if (!user.Role.Equals("SuperAdmin"))
             {
-                return BadRequest("Unauthorized Access");
+                return Unauthorized("Unauthorized Access");
             }
 
             string password = await Cryptography.GetPasswordHash(userCredentials.Password);
@@ -113,10 +120,30 @@ namespace ClubberTV.Controllers
             AuthResponseDto authResponseDto = new()
             {
                 Name = user.Name,
-                Token = jwtGenerator.Generate(user)
+                Token = jwtGenerator.Generate(user),
+                Role = user.Role
             };
 
             return Ok(authResponseDto);
+        }
+
+
+        [Authorize]
+        [HttpGet("refresh")]
+        public async ValueTask<IActionResult> Recognize()
+        {
+            string? id = _claimServices.GetUserClaim(ClaimTypes.NameIdentifier);
+            
+            if(Guid.TryParse(id, out Guid userId))
+            {
+                User user = await _userServices.GetUserByIdAsync(userId);
+
+                AuthResponseDto authResponseDto = new() { Name = user.Name, Role = user.Role, Token = "" };
+
+                return Ok(authResponseDto);
+
+            }
+            return UnprocessableEntity("Invalid user");
         }
 
         //[HttpPost("out")]

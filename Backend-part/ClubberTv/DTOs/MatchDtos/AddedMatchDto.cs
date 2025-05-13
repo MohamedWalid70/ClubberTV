@@ -14,10 +14,10 @@ namespace ClubberTV.DTOs.MatchDtos
         public required string Competition { get; set; }
 
         [Required(ErrorMessage = "Date field is required")]
-        public DateTime? Date { get; set; }
+        public DateTime Date { get; set; }
 
         [Required(ErrorMessage = "Status field is required")]
-        public Status? Status { get; set; }
+        public int Status { get; set; }
 
         [Required(ErrorMessage = "Duration field is required")]
         public int? Duration { get; set; }

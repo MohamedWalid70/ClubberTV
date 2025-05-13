@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DCpys1QBL9U=",
+  "dgSpecHash": "ZjT1uB+HqVE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Core\\ClubberTV.Core.csproj",
+  "projectFilePath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ClubberTV.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MW-PC\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\MW-PC\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.3.0\\microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512",

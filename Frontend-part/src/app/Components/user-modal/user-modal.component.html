@@ -1,0 +1,131 @@
+<div class="modal-backdrop" *ngIf="isOpen" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h5 class="modal-title">{{ isEditMode ? 'Edit User' : 'Add New User' }}</h5>
+      <button type="button" class="btn-close" (click)="close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="name">Full Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            formControlName="name" 
+            class="form-control" 
+            placeholder="Enter full name"
+          >
+          <div class="error-message" *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+            Name is required and must be at least 3 characters
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            formControlName="email" 
+            class="form-control" 
+            placeholder="Enter email"
+          >
+          <div class="error-message" *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+            Please enter a valid email address
+          </div>
+        </div>
+
+        @if(!isEditMode){
+
+          <div class="form-group mb-3">
+            <label for="username">Username</label>
+            <input 
+              type="text" 
+              id="username" 
+              formControlName="username" 
+              class="form-control" 
+              placeholder="Enter username"
+            >
+            <div class="error-message" *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched">
+              Username is required and must be at least 3 characters
+            </div>
+          </div>
+
+
+        <div class="form-group mb-3">
+            <label for="role">Role</label>
+            <select 
+              id="role" 
+              formControlName="role" 
+              class="form-control"
+            >
+              @for(role of userRoles; track role){
+                <option [value]="role">{{role}}</option>
+              }
+            </select>
+            <div class="error-message" *ngIf="userForm.get('role')?.invalid && userForm.get('role')?.touched">
+              Role is required
+            </div>
+          </div>
+        }
+
+        <div class="form-group mb-3">
+          <label for="phoneNumber">Phone Number</label>
+          <input 
+            type="tel" 
+            id="phoneNumber" 
+            formControlName="phoneNumber" 
+            class="form-control" 
+            placeholder="Enter phone number"
+          >
+          <div class="error-message" *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched">
+            Please enter a valid phone number (minimum 11 digits)
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input 
+              type="text" 
+              id="password" 
+              formControlName="password" 
+              class="form-control" 
+              placeholder="Enter password"
+            >
+          </div>
+          @if((userForm.get('password')?.hasError('minLength') || userForm.get('password')?.hasError('required')) && userForm.get('password')?.touched){
+            <div class="error-message">
+              Password must be at least 6 characters
+            </div>
+          }
+          @if(userForm.get('password')?.hasError('pattern') && userForm.get('password')?.touched){
+            <div class="error-message">
+              Password must contain at least 1 uppercase character, 1 lowercase character and 1 number
+            </div>
+          }
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="confirmPassword">Confirm Password</label>
+          <input 
+            type="text" 
+            id="confirmPassword" 
+            formControlName="confirmPassword" 
+            class="form-control" 
+            placeholder="Confirm your password"
+          >
+          <div class="error-message" *ngIf="userForm.hasError('passwordMismatch') && userForm.get('confirmPassword')?.touched">
+            Passwords do not match
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="close()">Cancel</button>
+          <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">
+            {{ isEditMode ? 'Update' : 'Create' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> 

@@ -3,6 +3,7 @@ using ClubberTV.Core.Entities;
 using ClubberTV.Core.Interfaces;
 using ClubberTV.DTOs.MatchDtos;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,7 +24,7 @@ namespace ClubberTV.Controllers
             _autoMapper = autoMapper;
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [HttpPost("new")]
         public async ValueTask<IActionResult> AddMatch(AddedMatchDto matchInfo)
         {
@@ -38,11 +39,12 @@ namespace ClubberTV.Controllers
 
                 if (addedEntries != 0)
                 {
-                    return Ok("A new match has been added successfully");
+                    return new StatusCodeResult(StatusCodes.Status201Created);
                 }
                 else
                 {
-                    return BadRequest("There is an error while adding the new match\nTry again later");
+                    // "There is an error while adding the new match\nTry again later"
+                    return new StatusCodeResult(StatusCodes.Status500InternalServerError);
                 }
                 
             }
@@ -52,13 +54,12 @@ namespace ClubberTV.Controllers
         }
 
 
-        [Authorize]
         [HttpGet("all")]
         public async ValueTask<IActionResult> GetMatches()
         {
             List<Match> matches = await _matchesServices.GetMatches().ToListAsync();
 
-            List<MatchResponseDto> matchContracts = _autoMapper.Map<List<MatchResponseDto>>(matches);
+            List<MatchOperationsDto> matchContracts = _autoMapper.Map<List<MatchOperationsDto>>(matches);
 
             return Ok(matchContracts);
         }
@@ -72,7 +73,7 @@ namespace ClubberTV.Controllers
 
             if (match != null)
             {
-                MatchResponseDto matchContract = _autoMapper.Map<MatchResponseDto>(match);
+                MatchOperationsDto matchContract = _autoMapper.Map<MatchOperationsDto>(match);
 
                 return Ok(matchContract);
             }
@@ -83,8 +84,8 @@ namespace ClubberTV.Controllers
         }
 
 
-        [Authorize(Roles = "Admin")]
-        [HttpPatch("match-to-be-updated")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+        [HttpPatch("specific-match")]
         public async ValueTask<IActionResult> EditMatch(MatchOperationsDto matchInfo)
         {
             if (ModelState.IsValid)
@@ -106,11 +107,11 @@ namespace ClubberTV.Controllers
 
                     if (commitResult != 0)
                     {
-                        return Ok("The match has been updated successfully");
+                        return Ok();
                     }
                     else
                     {
-                        return Ok("Nothing has been updated\nTry again later if you really edited the match values");
+                        return Accepted();
                     }
                 }
                 else
@@ -122,7 +123,7 @@ namespace ClubberTV.Controllers
         }
 
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [HttpDelete("specific-match/{id:guid}")]
         public async ValueTask<IActionResult> RemoveMatch([FromRoute] Guid id)
         {
@@ -135,11 +136,13 @@ namespace ClubberTV.Controllers
 
                 if (commitResult != 0)
                 {
-                    return Ok("The match has been deleted successfully");
+                    return Ok();
                 }
                 else
                 {
-                    return BadRequest("There is an error while deleting the match\nTry again later");
+                    //"There is an error while deleting the match\nTry again later"
+
+                    return new StatusCodeResult(StatusCodes.Status500InternalServerError);
                 }
             }
             else

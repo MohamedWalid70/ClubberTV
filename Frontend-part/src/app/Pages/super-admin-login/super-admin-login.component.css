@@ -1,0 +1,133 @@
+:host {
+  display: block;
+  min-height: calc(100vh - 56px); /* Subtract navbar height */
+  background-color: #f5f5f5;
+}
+
+.custom-container {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.text-gradient {
+  color: #2c3e50;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #2c3e50;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.input-group-text {
+  background: #f8f9fa;
+  border: none;
+  border-right: 1px solid #dee2e6;
+  color: #6c757d;
+  padding: 0.5rem 0.75rem;
+}
+
+.form-control {
+  flex: 1;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.password-toggle-btn {
+  background: none;
+  border: none;
+  border-left: 1px solid #dee2e6;
+  color: #6c757d;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.password-toggle-btn:hover {
+  color: #3498db;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #3498db;
+  border: none;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.btn-primary:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.spinner-border {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin: 1rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .text-gradient {
+    font-size: 1.5rem;
+  }
+}

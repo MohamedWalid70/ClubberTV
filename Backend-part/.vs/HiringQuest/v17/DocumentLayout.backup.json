@@ -1,0 +1,385 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\userdtos\\registereduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\userdtos\\registereduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|solutionrelative:clubbertv.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv.core\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|solutionrelative:clubbertv.core\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\userdtos\\updateduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\userdtos\\updateduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\userdtos\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\userdtos\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\userdtos\\modifieduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\userdtos\\modifieduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_JHQ2SRG/ClubberTVDb/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\matchdtos\\matchoperationsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\matchdtos\\matchoperationsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\matchdtos\\addedmatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\matchdtos\\addedmatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\clubbertv.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\clubbertv.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\profiles\\matchprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\profiles\\matchprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\playlistdtos\\playlistitemoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\playlistdtos\\playlistitemoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv.core\\entities\\playlistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|solutionrelative:clubbertv.core\\entities\\playlistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv.core\\modelbuddies\\matchbuddy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCAC88AF-3E7C-4380-80E7-EBEFE5111648}|ClubberTv.Core\\ClubberTV.Core.csproj|solutionrelative:clubbertv.core\\modelbuddies\\matchbuddy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\authdtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\authdtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|g:\\projects\\full-clubbertv\\backend-part\\clubbertv\\dtos\\authdtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D1F66-2AE8-42F0-A7C5-0ED680BCFEA5}|ClubberTv\\ClubberTV.csproj|solutionrelative:clubbertv\\dtos\\authdtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlaylistsController.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\PlaylistsController.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\Controllers\\PlaylistsController.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\PlaylistsController.cs",
+              "RelativeToolTip": "ClubberTv\\Controllers\\PlaylistsController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwKIAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T03:33:16.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserResponseDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\UserResponseDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\UserDtos\\UserResponseDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\UserResponseDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\UserDtos\\UserResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:27:07.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MatchesController.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\MatchesController.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\Controllers\\MatchesController.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\MatchesController.cs",
+              "RelativeToolTip": "ClubberTv\\Controllers\\MatchesController.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAhwGQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T02:32:43.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddedMatchDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\MatchDtos\\AddedMatchDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\MatchDtos\\AddedMatchDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\MatchDtos\\AddedMatchDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\MatchDtos\\AddedMatchDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T03:09:30.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\Controllers\\UsersController.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "ClubberTv\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAUwHwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:02:02.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisteredUserDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\RegisteredUserDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\UserDtos\\RegisteredUserDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\RegisteredUserDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\UserDtos\\RegisteredUserDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:28:04.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModifiedUserDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\ModifiedUserDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\UserDtos\\ModifiedUserDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\ModifiedUserDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\UserDtos\\ModifiedUserDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:40:06.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdatedUserDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\UpdatedUserDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\UserDtos\\UpdatedUserDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\UserDtos\\UpdatedUserDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\UserDtos\\UpdatedUserDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:58:32.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Match.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\Entities\\Match.cs",
+              "RelativeDocumentMoniker": "ClubberTv.Core\\Entities\\Match.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\Entities\\Match.cs",
+              "RelativeToolTip": "ClubberTv.Core\\Entities\\Match.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T05:51:15.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "ClubberTv.Core\\Entities\\User.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\Entities\\User.cs",
+              "RelativeToolTip": "ClubberTv.Core\\Entities\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:08:30.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_JHQ2SRG/ClubberTVDb/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_JHQ2SRG/ClubberTVDb/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-13T15:34:31.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ClubberTv\\appsettings.Development.json",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\appsettings.Development.json",
+              "RelativeToolTip": "ClubberTv\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-12T20:26:54.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\Controllers\\AuthController.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ClubberTv\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAuwGYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:13:17.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MatchOperationsDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\MatchDtos\\MatchOperationsDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\MatchDtos\\MatchOperationsDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\MatchDtos\\MatchOperationsDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\MatchDtos\\MatchOperationsDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T02:52:37.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ClubberTv.http",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\ClubberTv.http",
+              "RelativeDocumentMoniker": "ClubberTv\\ClubberTv.http",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\ClubberTv.http",
+              "RelativeToolTip": "ClubberTv\\ClubberTv.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-05-12T00:17:17.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\appsettings.json",
+              "RelativeDocumentMoniker": "ClubberTv\\appsettings.json",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\appsettings.json",
+              "RelativeToolTip": "ClubberTv\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-12T20:26:37.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Program.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\Program.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Program.cs",
+              "RelativeToolTip": "ClubberTv\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:55:00.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlaylistItemOperations.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\PlaylistDtos\\PlaylistItemOperations.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\PlaylistDtos\\PlaylistItemOperations.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\PlaylistDtos\\PlaylistItemOperations.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\PlaylistDtos\\PlaylistItemOperations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T03:32:46.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MatchProfile.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Profiles\\MatchProfile.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\Profiles\\MatchProfile.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\Profiles\\MatchProfile.cs",
+              "RelativeToolTip": "ClubberTv\\Profiles\\MatchProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T03:13:08.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MatchBuddy.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ModelBuddies\\MatchBuddy.cs",
+              "RelativeDocumentMoniker": "ClubberTv.Core\\ModelBuddies\\MatchBuddy.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ModelBuddies\\MatchBuddy.cs",
+              "RelativeToolTip": "ClubberTv.Core\\ModelBuddies\\MatchBuddy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T02:54:59.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AuthDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\AuthDtos\\AuthDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\AuthDtos\\AuthDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\AuthDtos\\AuthDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\AuthDtos\\AuthDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:24:21.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\AuthDtos\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "ClubberTv\\DTOs\\AuthDtos\\AuthResponseDto.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\DTOs\\AuthDtos\\AuthResponseDto.cs",
+              "RelativeToolTip": "ClubberTv\\DTOs\\AuthDtos\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:26:18.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PlaylistItem.cs",
+              "DocumentMoniker": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\Entities\\PlaylistItem.cs",
+              "RelativeDocumentMoniker": "ClubberTv.Core\\Entities\\PlaylistItem.cs",
+              "ToolTip": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\Entities\\PlaylistItem.cs",
+              "RelativeToolTip": "ClubberTv.Core\\Entities\\PlaylistItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:08:28.433Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

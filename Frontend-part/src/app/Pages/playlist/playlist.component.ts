@@ -1,15 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-interface Match {
-  id: number;
-  title: string;
-  league: string;
-  status: 'Live' | 'Replay';
-  thumbnail: string;
-  dateTime: string;
-}
+import { Match, MatchStatus } from '../../Interfaces/Match';
+import { PlaylistService } from '../../services/playlist-items-service/playlist.service';
 
 @Component({
   selector: 'app-playlist',
@@ -18,44 +11,59 @@ interface Match {
   templateUrl: './playlist.component.html',
   styleUrl: './playlist.component.css'
 })
-export class PlaylistComponent {
+export class PlaylistComponent implements OnInit {
   searchQuery: string = '';
-  matches = [
-    {
-      id: 1,
-      title: 'Team A vs Team B',
-      league: 'Premier League',
-      status: 'Live',
-      thumbnail: 'https://placehold.co/400x225?text=Match+1',
-      dateTime: '2024-03-20 15:00'
-    },
-    {
-      id: 2,
-      title: 'Team C vs Team D',
-      league: 'Champions League',
-      status: 'Replay',
-      thumbnail: 'https://placehold.co/400x225?text=Match+2',
-      dateTime: '2024-03-19 18:30'
-    },
-    {
-      id: 3,
-      title: 'Team E vs Team F',
-      league: 'La Liga',
-      status: 'Live',
-      thumbnail: 'https://placehold.co/400x225?text=Match+3',
-      dateTime: '2024-03-21 20:00'
-    }
-  ];
+  matches: Match[] = [];
+  MatchStatus = MatchStatus;
+  staticThumbnail = 'https://placehold.co/400x225?text=Match+1';
+
+  constructor(private playlistService: PlaylistService) {}
+
+  ngOnInit() {
+    this.loadPlaylist();
+  }
+
+  loadPlaylist() {
+    this.playlistService.getUserPlaylistItems().subscribe({
+      next: (matches) => {
+        this.matches = matches;
+      },
+      error: (error) => {
+        console.error('Error loading playlist:', error);
+      }
+    });
+  }
 
   searchMatches() {
-    // Implement search functionality
+    const query = this.searchQuery.trim().toLowerCase();
+    if (query) {
+      this.matches = this.matches.filter(match =>
+        match.title.toLowerCase().includes(query) ||
+        match.competition.toLowerCase().includes(query)
+      );
+    }
+    else {
+      this.loadPlaylist();
+    }
   }
 
-  removeFromPlaylist(id: number) {
-    // Implement remove functionality
+  removeFromPlaylist(matchId: string) {
+    if (confirm('Are you sure you want to remove this match from your playlist?')) {
+      this.playlistService.removeMatchFromPlaylist(matchId).subscribe({
+        next: (response) => {
+          if(response?.status === 200) {
+            this.matches = this.matches.filter(match => match.id !== matchId);
+          }
+        },
+        error: (error) => {
+          alert("Error occurred while removing match from playlist\nTry again later");
+        }
+      });
+    }
   }
 
-  watchMatch(id: number) {
-    // Implement watch functionality
+  watchMatch(matchId: string) {
+    // Implement navigation or player logic here
+    alert('Watch match: ' + matchId);
   }
 } 

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { dashboardAuthGuard } from './guards/DashboardGuard/dashboard-auth.guard';
-import { historyAuthGuard } from './guards/HistoryGuard/history-auth.guard';
+import { dashboardGuard } from './guards/dashboard-guard/dashboard.guard';
+import { playlistGuard } from './guards/playlist-guard/playlist.guard';
 
 
 export const routes: Routes = [
@@ -11,7 +11,7 @@ export const routes: Routes = [
         (m) => m.PlaylistComponent
       ),
     title: 'My Playlists',
-    // canActivate: [historyAuthGuard]
+    canActivate: [playlistGuard]
   },
   {
     path: '',
@@ -41,19 +41,33 @@ export const routes: Routes = [
     loadComponent: () => import('./Pages/dashboard/dashboard.component').
     then(m => m.DashboardComponent),
     title: 'Dashboard',
-    // canActivate: [dashboardAuthGuard]
+    canActivate: [dashboardGuard]
   },
   {
     path: 'admin-login',
-    loadComponent: () => import('./Pages/admin-login/admin-login.component').then(m => m.AdminLoginComponent),
+    loadComponent: () => import('./Pages/admin-login/admin-login.component').
+    then(m => m.AdminLoginComponent),
     title: 'Admin Login',
-    pathMatch: 'full',
+    pathMatch: 'full'
   },
   {
     path: 'about',
     loadComponent: () => import('./Pages/about/about.component').
     then(m => m.AboutComponent),
     title: 'About Us'
+  },
+  // {
+  //   path: 'admin-signup',
+  //   loadComponent: () => import('./Pages/admin-signup/admin-signup/admin-signup.component').
+  //   then(m => m.AdminSignupComponent),
+  //   title: 'Admin Sign Up'
+  // },
+  {
+    path: 'super-admin-login',
+    loadComponent: () => import('./Pages/super-admin-login/super-admin-login.component').
+    then(m => m.SuperAdminLoginComponent),
+    title: 'Super Admin Login',
+    pathMatch: 'full'
   },
   {
     path: '**',

@@ -32,7 +32,6 @@ namespace ClubberTV.Controllers
             _claimServices = claimServices;
         }
 
-        
         [HttpPost("new-user")]
         public async ValueTask<IActionResult> AddUser(RegisteredUserDto userInfo)
         {
@@ -58,11 +57,12 @@ namespace ClubberTV.Controllers
 
                     if (addedEntries != 0)
                     {
-                        return Ok("A new user has been created successfully");
+                        return new StatusCodeResult(StatusCodes.Status201Created);
                     }
                     else
                     {
-                        return BadRequest("There is an error while creating the new user\nTry again later");
+                        // "There is an error while creating the new user\nTry again later"
+                        return Accepted();
                     }
                 }
                 else
@@ -102,11 +102,12 @@ namespace ClubberTV.Controllers
 
                     if (addedEntries != 0)
                     {
-                        return Ok("A new admin has been created successfully");
+                        return new StatusCodeResult(StatusCodes.Status201Created);
                     }
                     else
                     {
-                        return BadRequest("There is an error while creating the new admin\nTry again later");
+                        // "There is an error while creating the new admin\nTry again later")
+                        return Accepted();
                     }
                 }
                 else
@@ -167,7 +168,7 @@ namespace ClubberTV.Controllers
 
 
         [Authorize(Roles = "Admin")]
-        [HttpPatch("admin-modification")]
+        [HttpPatch("specific-user")]
         public async ValueTask<IActionResult> EditUserByAdminPrivilege(UpdatedUserDto userInfo)
         {
             if (ModelState.IsValid)
@@ -178,17 +179,25 @@ namespace ClubberTV.Controllers
                 {   
                     _userServices.BeginUpdateUser(user);
 
-                    user.Email = userInfo.Email.ToLower();
-                    user.Name = userInfo.Name;
-                    user.PhoneNumber = userInfo.PhoneNumber;
-                    user.Password = await Cryptography.GetPasswordHash(userInfo.Password);
+                    if(userInfo.Email != null)
+                        user.Email = userInfo.Email.ToLower();
+
+                    if(!string.IsNullOrEmpty(userInfo.Name))
+                        user.Name = userInfo.Name;
+                    
+                    if(!string.IsNullOrEmpty(userInfo.PhoneNumber))
+                        user.PhoneNumber = userInfo.PhoneNumber;
+
+                    if(!string.IsNullOrEmpty(userInfo.Password))
+                        user.Password = await Cryptography.GetPasswordHash(userInfo.Password);
+                    
                     user.Id = userInfo.Id;
 
                     int commitResult = await _unitOfWork.CommitAsync();
 
                     if (commitResult != 0)
                     {
-                        return Ok("The user has been updated successfully");
+                        return Ok();
                     }
                     else
                     {
@@ -205,7 +214,7 @@ namespace ClubberTV.Controllers
 
 
         [Authorize(Roles = "SuperAdmin")]
-        [HttpPatch("super-admin-modification")]
+        [HttpPatch("specific-user-or-admin")]
         public async ValueTask<IActionResult> EditUserBySuperAdminPrivilege(UpdatedUserDto userInfo)
         {
             if (ModelState.IsValid)
@@ -216,17 +225,26 @@ namespace ClubberTV.Controllers
                 {
                     _userServices.BeginUpdateUser(user);
 
-                    user.Email = userInfo.Email.ToLower();
-                    user.Name = userInfo.Name;
-                    user.PhoneNumber = userInfo.PhoneNumber;
-                    user.Password = await Cryptography.GetPasswordHash(userInfo.Password);
+                    if(!string.IsNullOrEmpty(userInfo.Email))
+                        user.Email = userInfo.Email.ToLower();
+                    
+                    if(!string.IsNullOrEmpty(userInfo.Name))
+                        user.Name = userInfo.Name;
+
+                    if (!string.IsNullOrEmpty(userInfo.PhoneNumber))
+                        user.PhoneNumber = userInfo.PhoneNumber;
+
+                    if (!string.IsNullOrEmpty(userInfo.Password))
+                    {
+                        user.Password = await Cryptography.GetPasswordHash(userInfo.Password);
+                    }
                     user.Id = userInfo.Id;
 
                     int commitResult = await _unitOfWork.CommitAsync();
 
                     if (commitResult != 0)
                     {
-                        return Ok("The user has been updated successfully");
+                        return Ok();
                     }
                     else
                     {
@@ -244,7 +262,7 @@ namespace ClubberTV.Controllers
 
 
         [Authorize(Roles = "Admin,User,SuperAdmin")]
-        [HttpPatch("user-modification")]
+        [HttpPatch("self-user")]
         public async ValueTask<IActionResult> UpdateUserByLoggedInPrivilege(ModifiedUserDto userInfo)
         {
             if (ModelState.IsValid)
@@ -258,20 +276,29 @@ namespace ClubberTV.Controllers
 
                         _userServices.BeginUpdateUser(user);
 
-                        user.Email = userInfo.Email.ToLower();
-                        user.Name = userInfo.Name;
-                        user.PhoneNumber = userInfo.PhoneNumber;
-                        user.Password = await Cryptography.GetPasswordHash(userInfo.Password);
+                        if (!string.IsNullOrEmpty(userInfo.Email))
+                            user.Email = userInfo.Email.ToLower();
 
+                        if (!string.IsNullOrEmpty(userInfo.Name))
+                            user.Name = userInfo.Name;
+
+                        if (!string.IsNullOrEmpty(userInfo.PhoneNumber))
+                            user.PhoneNumber = userInfo.PhoneNumber;
+
+                        if (!string.IsNullOrEmpty(userInfo.Password))
+                        {
+                            user.Password = await Cryptography.GetPasswordHash(userInfo.Password);
+                        }
                         int commitResult = await _unitOfWork.CommitAsync();
 
                         if (commitResult != 0)
                         {
-                            return Ok("The user has been updated successfully");
+                            return Ok();
                         }
                         else
                         {
-                            return BadRequest("There is an error while updating the user\nTry again later");
+                            // "There is an error while updating the user\nTry again later"
+                            return Accepted();
                         }
                     }
                     else
@@ -279,7 +306,7 @@ namespace ClubberTV.Controllers
                         return NotFound("The user does not exist");
                     }
                 }
-                return NotFound("You're logged out\nplease, login and then, proceed with the operation");
+                return BadRequest("You're logged out\nplease, login and then, proceed with the operation");
             }
             return BadRequest();
         }
@@ -300,16 +327,18 @@ namespace ClubberTV.Controllers
 
                     if (commitResult != 0)
                     {
-                        return Ok("The user has been updated successfully");
+                        return Ok();
                     }
                     else
                     {
-                        return BadRequest("There is an error while deleting the user\nTry again later");
+                        //"There is an error while deleting the user\nTry again later"
+                        return new StatusCodeResult(StatusCodes.Status500InternalServerError);
                     }
                 }
                 else
                 {
-                    return BadRequest("No such privilege for such an action");
+                    // "No such privilege for such an action"
+                    return Unauthorized();
                 }
             }
             else
@@ -334,16 +363,18 @@ namespace ClubberTV.Controllers
 
                     if (commitResult != 0)
                     {
-                        return Ok("The user has been updated successfully");
+                        return Ok();
                     }
                     else
                     {
-                        return BadRequest("There is an error while deleting the user\nTry again later");
+                        //"There is an error while deleting the user\nTry again later"
+                        return new StatusCodeResult(StatusCodes.Status500InternalServerError);
                     }
                 }
                 else
                 {
-                    return BadRequest("No such privilege for such an action");
+                    // "No such privilege for such an action"
+                    return Unauthorized();
                 }
             }
             else

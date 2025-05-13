@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/f
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { User } from '../../Interfaces/User';
-import { SigningService } from '../../services/SigningService/signing.service';
+import { RegisteredUser } from '../../Interfaces/User';
+import { UsersService } from '../../services/users-service/users.service';
 import { confirmPassValidator } from '../../Validators/passwordConfirmation.validator';
 // import { NavbarComponent } from '../../Components/navbar/navbar.component';
 
@@ -24,13 +24,15 @@ export class SignupComponent {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private signingService: SigningService
+    private _usersService: UsersService
   ) {
     this.signupForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
       username: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6), Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$")]],
-      confirmPassword: ['', Validators.required]
+      confirmPassword: ['', Validators.required],
+      phoneNumber: [null, [Validators.pattern("^[0-9]{11,}$")]],
     }, {
       validators: confirmPassValidator('password', 'confirmPassword')
     });
@@ -39,29 +41,32 @@ export class SignupComponent {
   onSubmit() {
     if (this.signupForm.valid) {
 
-        const user: User = {
+        this.isLoading = true;
+
+        const user: RegisteredUser = {
+            name: this.signupForm.value.name,
             username: this.signupForm.value.username,
             email: this.signupForm.value.email,
             password: this.signupForm.value.password,
-            confirmPassword: this.signupForm.value.confirmPassword,
-            role: 'user',
-            phoneNumber: '1234567890'
+            phoneNumber: this.signupForm.value.phoneNumber==""? null : this.signupForm.value.phoneNumber
         };
 
 
-        this.signingService.signup(user).subscribe({
-
+        this._usersService.signUpUser(user).subscribe({
           next: (response) => {
             console.log(response);
-            alert(response.message);
-            setTimeout(() => {
-              this.isLoading = false;
-              this.router.navigate(['/login']);
-            }, 1500);
+            if(response?.status === 201) {
+              alert("Account created successfully");
+              setTimeout(() => {
+                this.isLoading = false;
+                this.router.navigate(['/login']);
+              }, 1500);
+            }
           },
           error: (response) => {
             console.log(response);
-            alert("Please, follow the known rules to create an account");
+            alert("Incomplete operation\nPlease, follow the known rules to create an account");
+            this.isLoading = false;
           }
           
         });

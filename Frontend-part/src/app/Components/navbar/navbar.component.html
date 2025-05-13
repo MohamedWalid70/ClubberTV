@@ -4,16 +4,16 @@
       <li class="nav-item">
         <a class="fs-5 text-black text-decoration-none" aria-current="page" routerLink="/main-page" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Brand</a>
       </li>
-      <!-- @if(loginEnabled && !isAdminLoggedIn) { -->
+      @if(loginEnabled) {
         <li class="nav-item">
           <a class="nav-link" routerLink="/playlist" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">My Playlist</a>
         </li>
-      <!-- } -->
+      }
       <li class="nav-item">
         <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About Us</a>
       </li>
 
-      <!-- @if(isAdminLoggedIn) { -->
+      @if(isAdminLoggedIn || isSuperAdminLoggedIn) {
       <li class="nav-item">
         <a
           class="nav-link"
@@ -23,7 +23,7 @@
           >Dashboard</a
         >
       </li>
-      <!-- } -->
+      }
       @if(loginEnabled==false) {
         <li class="justify-self-end ms-auto">
           <ul class="nav nav-underline column-gap-5 fw-semibold align-items-center">
@@ -40,7 +40,7 @@
         <li class="justify-self-end ms-auto">
           <ul class="nav nav-underline column-gap-5 fw-semibold align-items-center">
             <li class="nav-item cursor-pointer">
-            <span class="nav-link cursor-grab">Welcome, {{username}}</span>
+            <span class="nav-link cursor-grab">Welcome, {{name}}</span>
           </li>
           <li class="nav-item cursor-pointer">
             <a class="btn btn-danger" (click)="logout()">Logout</a>

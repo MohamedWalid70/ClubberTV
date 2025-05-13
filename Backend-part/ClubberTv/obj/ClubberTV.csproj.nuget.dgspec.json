@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv\\ClubberTV.csproj": {}
+    "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\ClubberTV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Core\\ClubberTV.Core.csproj": {
+    "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ClubberTV.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Core\\ClubberTV.Core.csproj",
+        "projectUniqueName": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ClubberTV.Core.csproj",
         "projectName": "ClubberTV.Core",
-        "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Core\\ClubberTV.Core.csproj",
+        "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ClubberTV.Core.csproj",
         "packagesPath": "C:\\Users\\MW-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Core\\obj\\",
+        "outputPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -87,14 +87,14 @@
         }
       }
     },
-    "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Infrastructure\\ClubberTV.Infrastructure.csproj": {
+    "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Infrastructure\\ClubberTV.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Infrastructure\\ClubberTV.Infrastructure.csproj",
+        "projectUniqueName": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Infrastructure\\ClubberTV.Infrastructure.csproj",
         "projectName": "ClubberTV.Infrastructure",
-        "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Infrastructure\\ClubberTV.Infrastructure.csproj",
+        "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Infrastructure\\ClubberTV.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\MW-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Infrastructure\\obj\\",
+        "outputPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -115,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Core\\ClubberTV.Core.csproj": {
-                "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Core\\ClubberTV.Core.csproj"
+              "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Core\\ClubberTV.Core.csproj": {
+                "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Core\\ClubberTV.Core.csproj"
               }
             }
           }
@@ -183,14 +183,14 @@
         }
       }
     },
-    "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Services\\ClubberTV.Services.csproj": {
+    "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Services\\ClubberTV.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Services\\ClubberTV.Services.csproj",
+        "projectUniqueName": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Services\\ClubberTV.Services.csproj",
         "projectName": "ClubberTV.Services",
-        "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Services\\ClubberTV.Services.csproj",
+        "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Services\\ClubberTV.Services.csproj",
         "packagesPath": "C:\\Users\\MW-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Services\\obj\\",
+        "outputPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -211,8 +211,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Core\\ClubberTV.Core.csproj": {
-                "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv.Core\\ClubberTV.Core.csproj"
+              "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ClubberTV.Core.csproj": {
+                "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv.Core\\ClubberTV.Core.csproj"
               }
             }
           }
@@ -255,14 +255,14 @@
         }
       }
     },
-    "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv\\ClubberTV.csproj": {
+    "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\ClubberTV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv\\ClubberTV.csproj",
+        "projectUniqueName": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\ClubberTV.csproj",
         "projectName": "ClubberTV",
-        "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv\\ClubberTV.csproj",
+        "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\ClubberTV.csproj",
         "packagesPath": "C:\\Users\\MW-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv\\obj\\",
+        "outputPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -283,11 +283,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Infrastructure\\ClubberTV.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Infrastructure\\ClubberTV.Infrastructure.csproj"
+              "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Infrastructure\\ClubberTV.Infrastructure.csproj": {
+                "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Infrastructure\\ClubberTV.Infrastructure.csproj"
               },
-              "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Services\\ClubberTV.Services.csproj": {
-                "projectPath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTV.Services\\ClubberTV.Services.csproj"
+              "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Services\\ClubberTV.Services.csproj": {
+                "projectPath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTV.Services\\ClubberTV.Services.csproj"
               }
             }
           }

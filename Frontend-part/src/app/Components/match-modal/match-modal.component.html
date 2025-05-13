@@ -1,0 +1,90 @@
+<div class="modal-backdrop" *ngIf="isOpen" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h5 class="modal-title">{{ isEditMode ? 'Edit Match' : 'Add New Match' }}</h5>
+      <button type="button" class="btn-close" (click)="close()">×</button>
+    </div>
+    
+    <div class="modal-body">
+      <form [formGroup]="matchForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="title">Match Title</label>
+          <input 
+            type="text" 
+            id="title" 
+            formControlName="title" 
+            class="form-control" 
+            placeholder="Enter match title"
+          >
+          <div class="error-message" *ngIf="matchForm.get('title')?.invalid && matchForm.get('title')?.touched">
+            Title is required and must be at least 3 characters
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="competition">Competition</label>
+          <input 
+            type="text" 
+            id="competition" 
+            formControlName="competition" 
+            class="form-control" 
+            placeholder="Enter competition name"
+          >
+          <div class="error-message" *ngIf="matchForm.get('competition')?.invalid && matchForm.get('competition')?.touched">
+            Competition is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dateTime">Date & Time</label>
+          <input 
+            type="datetime-local" 
+            id="dateTime" 
+            formControlName="date" 
+            class="form-control"
+          >
+          <div class="error-message" *ngIf="matchForm.get('dateTime')?.invalid && matchForm.get('dateTime')?.touched">
+            Date and time are required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select 
+            id="status" 
+            formControlName="status" 
+            class="form-control"
+          >
+            <option [value]="matchStatuses.Live">Live</option>
+            <option [value]="matchStatuses.Replay">Replay</option>
+          </select>
+          <div class="error-message" *ngIf="matchForm.get('status')?.invalid && matchForm.get('status')?.touched">
+            Status is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Duration (minutes)</label>
+          <input 
+            type="number" 
+            id="duration" 
+            formControlName="duration" 
+            class="form-control" 
+            min="0"
+            placeholder="Enter match duration in minutes"
+          >
+          <div class="error-message" *ngIf="matchForm.get('duration')?.invalid && matchForm.get('duration')?.touched">
+            Duration must be a positive number
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="close()">Cancel</button>
+          <button type="submit" class="btn btn-primary" [disabled]="matchForm.invalid">
+            {{ isEditMode ? 'Update Match' : 'Create Match' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

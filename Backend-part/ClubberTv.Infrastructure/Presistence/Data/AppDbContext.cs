@@ -5,9 +5,9 @@ namespace ClubberTV.Infrastructure.Presistence.Data
 {
     public class AppDbContext : DbContext
     {
-        //public DbSet<User> Users { get; set; }
-        //public DbSet<Match> Matches { get; set; }
-        //public DbSet<Playlist> Playlists { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Match> Matches { get; set; }
+        public DbSet<PlaylistItem> Playlists { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
             
@@ -23,8 +23,8 @@ namespace ClubberTV.Infrastructure.Presistence.Data
 
             modelBuilder.Entity<PlaylistItem>().HasKey(playlist => new { playlist.UserId, playlist.MatchId });
 
-            modelBuilder.Entity<Match>().Property(match => match.Title).HasMaxLength(50);
-            modelBuilder.Entity<Match>().Property(match => match.Competition).HasMaxLength(40);
+            modelBuilder.Entity<Match>().Property(match => match.Title).HasMaxLength(50).IsRequired(true);
+            modelBuilder.Entity<Match>().Property(match => match.Competition).HasMaxLength(40).IsRequired(true);
 
             modelBuilder.Entity<User>().Property(user => user.Email).HasMaxLength(30);
             modelBuilder.Entity<User>().Property(user => user.Username).HasMaxLength(20);
@@ -32,6 +32,7 @@ namespace ClubberTV.Infrastructure.Presistence.Data
             modelBuilder.Entity<User>().Property(user => user.Password).HasMaxLength(64);
             modelBuilder.Entity<User>().Property(user => user.PhoneNumber).HasMaxLength(15);
             modelBuilder.Entity<User>().Property(user => user.Role).HasMaxLength(13);
+
 
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Match>().ToTable("Matches");

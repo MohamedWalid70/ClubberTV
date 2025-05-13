@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.Extensions.Options;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 namespace ClubberTV.DTOs.UserDtos
 {
@@ -19,7 +21,7 @@ namespace ClubberTV.DTOs.UserDtos
         [EmailAddress(ErrorMessage = "Invalid email"), MaxLength(30, ErrorMessage = "Input exceeded the allowed length"), StringLength(30)]
         public required string Email { get; set; }
 
-        [Phone(ErrorMessage = "Phone Number must consist of numbers only"), MaxLength(15, ErrorMessage = "Input exceeded the allowed length"), StringLength(15)]
+        [Phone(ErrorMessage = "Please, enter the phone number properly"), MaxLength(15, ErrorMessage = "Input exceeded the allowed length"), StringLength(15)]
         public string? PhoneNumber { get; set; }
     }
 }

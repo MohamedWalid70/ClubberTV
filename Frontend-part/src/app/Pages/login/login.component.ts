@@ -3,10 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { LoginUser } from '../../Interfaces/LoginUser';
-import { SigningService } from '../../services/SigningService/signing.service';
+import { LoggedinUser } from '../../Interfaces/LoggedinUser';
+import { SigningService } from '../../services/auth-services/signing-service/signing.service';
 import { LoginResponse } from '../../Interfaces/LoginResponse';
-import { LoginEnableService } from '../../services/LoginEnable/login-enable.service';
+import { LoginEnableService } from '../../services/auth-services/login-enable/login-enable.service';
 // import { NavbarComponent } from '../../Components/navbar/navbar.component';
 import { Subscription } from 'rxjs';
 
@@ -53,10 +53,9 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       this.isLoading = true;
 
-      const loginUser: LoginUser = {
+      const loginUser: LoggedinUser = {
         email: this.loginForm.value.email,
         password: this.loginForm.value.password,
-        rememberMe: this.loginForm.value.rememberMe
       };
       
       if(this.subscription) {
@@ -65,12 +64,12 @@ export class LoginComponent {
 
       if(loginUser.email.toLowerCase() != 'admin@solvesmart.com') {
 
-        this.subscription = this.signingService.login(loginUser).subscribe({
+        this.subscription = this.signingService.loginUser(loginUser).subscribe({
           next: (response) => {
-            alert(`Welcome ${response?.user?.username}`);
-            localStorage.setItem('token', response?.token);
-            localStorage.setItem('username', response?.user?.username);
-            localStorage.setItem('userId', response?.user?.id);
+            alert(`Welcome ${response?.body?.name}`);
+            localStorage.setItem('token', response?.body?.token);
+            localStorage.setItem('name', response?.body?.name);
+
             this.loginEnableService.setLoginEnabled(true);
             setTimeout(() => {
               this.isLoading = false;

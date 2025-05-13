@@ -98,6 +98,18 @@
         }
       }
     },
+    "/v1/clubber-tv/Auth/refresh": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/v1/clubber-tv/Matches/new": {
       "post": {
         "tags": [
@@ -185,7 +197,7 @@
         }
       }
     },
-    "/v1/clubber-tv/Matches/match-to-be-updated": {
+    "/v1/clubber-tv/Matches/specific-match": {
       "patch": {
         "tags": [
           "Matches"
@@ -225,17 +237,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations"
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.MatchOperationsDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations"
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.MatchOperationsDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations"
+                "$ref": "#/components/schemas/ClubberTV.DTOs.MatchDtos.MatchOperationsDto"
               }
             }
           }
@@ -259,8 +271,20 @@
         }
       }
     },
-    "/v1/clubber-tv/Playlists/specific-playlist/{id}": {
+    "/v1/clubber-tv/Playlists/user-playlist": {
       "get": {
+        "tags": [
+          "Playlists"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/clubber-tv/Playlists/user-playlist-item/{id}": {
+      "delete": {
         "tags": [
           "Playlists"
         ],
@@ -275,37 +299,6 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/v1/clubber-tv/Playlists/specific-playlist-item": {
-      "delete": {
-        "tags": [
-          "Playlists"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClubberTV.Core.Entities.PlaylistItem"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClubberTV.Core.Entities.PlaylistItem"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClubberTV.Core.Entities.PlaylistItem"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -443,7 +436,7 @@
         }
       }
     },
-    "/v1/clubber-tv/Users/admin-modification": {
+    "/v1/clubber-tv/Users/specific-user": {
       "patch": {
         "tags": [
           "Users"
@@ -474,7 +467,7 @@
         }
       }
     },
-    "/v1/clubber-tv/Users/super-admin-modification": {
+    "/v1/clubber-tv/Users/specific-user-or-admin": {
       "patch": {
         "tags": [
           "Users"
@@ -505,7 +498,7 @@
         }
       }
     },
-    "/v1/clubber-tv/Users/user-modification": {
+    "/v1/clubber-tv/Users/self-user": {
       "patch": {
         "tags": [
           "Users"
@@ -562,28 +555,6 @@
   },
   "components": {
     "schemas": {
-      "ClubberTV.Core.Entities.PlaylistItem": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "matchId": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ClubberTV.Core.Types.Types-Status": {
-        "enum": [
-          0,
-          1
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
       "ClubberTV.DTOs.AuthDtos.AuthDto": {
         "required": [
           "email",
@@ -630,7 +601,8 @@
             "format": "date-time"
           },
           "status": {
-            "$ref": "#/components/schemas/ClubberTV.Core.Types.Types-Status"
+            "type": "integer",
+            "format": "int32"
           },
           "duration": {
             "type": "integer",
@@ -668,7 +640,8 @@
             "format": "date-time"
           },
           "status": {
-            "$ref": "#/components/schemas/ClubberTV.Core.Types.Types-Status"
+            "type": "integer",
+            "format": "int32"
           },
           "duration": {
             "type": "integer",
@@ -677,30 +650,7 @@
         },
         "additionalProperties": false
       },
-      "ClubberTV.DTOs.PlaylistDtos.PlaylistItemOperations": {
-        "required": [
-          "matchId",
-          "userId"
-        ],
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "matchId": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
       "ClubberTV.DTOs.UserDtos.ModifiedUserDto": {
-        "required": [
-          "email",
-          "name",
-          "password"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -783,10 +733,7 @@
       },
       "ClubberTV.DTOs.UserDtos.UpdatedUserDto": {
         "required": [
-          "email",
-          "id",
-          "name",
-          "password"
+          "id"
         ],
         "type": "object",
         "properties": {

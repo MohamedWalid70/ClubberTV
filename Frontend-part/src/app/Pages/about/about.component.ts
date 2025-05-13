@@ -1,43 +1,42 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from '../../Components/footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, FooterComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  companyInfo = {
-    name: 'Our Brand',
-    founded: '2025',
-    mission: 'To empower developers through innovative learning experiences and cutting-edge technology.',
-    vision: 'To become the leading platform for AI-powered coding education worldwide.'
-  };
-
-  values = [
+  features = [
     {
-      icon: 'bi-lightbulb',
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible in coding education.'
+      icon: 'bi-trophy',
+      title: 'Live Matches',
+      description: 'Watch your favorite sports events live with high-quality streaming and real-time updates.'
     },
     {
-      icon: 'bi-people',
-      title: 'Community',
-      description: 'We believe in the power of learning together and supporting each other.'
+      icon: 'bi-collection-play',
+      title: 'Match Replays',
+      description: 'Missed a match? No problem! Access our extensive library of match replays anytime.'
     },
     {
-      icon: 'bi-graph-up',
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from code quality to user experience.'
+      icon: 'bi-calendar-event',
+      title: 'Match Schedule',
+      description: 'Stay updated with our comprehensive match schedule and never miss an important game.'
     },
     {
-      icon: 'bi-heart',
-      title: 'Passion',
-      description: 'We are passionate about technology and helping others succeed.'
+      icon: 'bi-person-video3',
+      title: 'Expert Commentary',
+      description: 'Enjoy professional commentary and analysis from experienced sports experts.'
     }
   ];
 
+  stats = [
+    { number: '1000+', label: 'Live Matches' },
+    { number: '50+', label: 'Sports Categories' },
+    { number: '1M+', label: 'Active Users' },
+    { number: '24/7', label: 'Support' }
+  ];
 } 

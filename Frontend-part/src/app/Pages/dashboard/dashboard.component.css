@@ -392,4 +392,65 @@
 /* Ensure proper alignment for the competition column */
 .table td:nth-child(2) {
   text-align: left;
+}
+
+/* Add these styles for the username */
+.username {
+  font-family: 'Roboto Mono', monospace;
+  color: #4e73df;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background-color: rgba(78, 115, 223, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+/* Update the table cell styles for username column */
+.table td:nth-child(2) {
+  min-width: 120px;
+  text-align: left;
+}
+
+/* Add these styles for the matches table */
+.table th {
+  font-weight: 600;
+  color: #495057;
+  border-bottom-width: 1px;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+}
+
+.btn-group .btn {
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-group .btn i {
+  font-size: 1rem;
+}
+
+.input-group .input-group-text {
+  background-color: transparent;
+  border-right: none;
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+
+.input-group .form-control:focus {
+  border-color: #ced4da;
+  box-shadow: none;
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0,0,0,.125);
 } 

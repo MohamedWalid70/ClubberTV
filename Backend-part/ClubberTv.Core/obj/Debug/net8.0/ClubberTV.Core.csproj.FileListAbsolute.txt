@@ -10,3 +10,16 @@ C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Core\obj\Debug\net8.0\ClubberT
 C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Core\obj\Debug\net8.0\refint\ClubberTV.Core.dll
 C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.pdb
 C:\Users\MW-PC\source\repos\HiringQuest\ClubberTv.Core\obj\Debug\net8.0\ref\ClubberTV.Core.dll
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\bin\Debug\net8.0\ClubberTV.Core.deps.json
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\bin\Debug\net8.0\ClubberTV.Core.dll
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\bin\Debug\net8.0\ClubberTV.Core.pdb
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.csproj.AssemblyReference.cache
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.AssemblyInfoInputs.cache
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.AssemblyInfo.cs
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.csproj.CoreCompileInputs.cache
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.sourcelink.json
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.dll
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\refint\ClubberTV.Core.dll
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ClubberTV.Core.pdb
+G:\Projects\Full-ClubberTv\Backend-part\ClubberTv.Core\obj\Debug\net8.0\ref\ClubberTV.Core.dll

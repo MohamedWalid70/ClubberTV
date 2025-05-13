@@ -2,12 +2,12 @@
   <div class="signup-card">
     <div class="signup-header">
       <h1 class="text-gradient">Create Account</h1>
-      <p class="text-muted">Join our community of problem solvers</p>
+      <p class="text-muted">Join our world of sports entertainment</p>
     </div>
 
     <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
       <div class="form-group">
-        <label for="username">Username</label>
+        <label for="username">Username*</label>
         <div class="input-group">
           <span class="input-group-text">
             <i class="bi bi-person"></i>
@@ -26,7 +26,45 @@
       </div>
 
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="name">Full Name*</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bi bi-person-badge"></i>
+          </span>
+          <input 
+            type="text" 
+            id="name" 
+            formControlName="name" 
+            class="form-control" 
+            placeholder="Enter your full name"
+          >
+        </div>
+        <div class="error-message" *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched">
+          Name is required and must be at least 3 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="bi bi-telephone"></i>
+          </span>
+          <input 
+            type="tel" 
+            id="phoneNumber" 
+            formControlName="phoneNumber" 
+            class="form-control" 
+            placeholder="Enter your phone number"
+          >
+        </div>
+        <div class="error-message" *ngIf="signupForm.get('phoneNumber')?.invalid && signupForm.get('phoneNumber')?.touched">
+          Please enter a valid phone number (minimum 11 digits)
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email*</label>
         <div class="input-group">
           <span class="input-group-text">
             <i class="bi bi-envelope"></i>
@@ -44,8 +82,10 @@
         </div>
       </div>
 
+      
+
       <div class="form-group">
-        <label for="password">Password</label>
+        <label for="password">Password*</label>
         <div class="input-group">
           <span class="input-group-text">
             <i class="bi bi-lock"></i>
@@ -72,7 +112,7 @@
 
 
       <div class="form-group">
-        <label for="confirmPassword">Confirm Password</label>
+        <label for="confirmPassword">Confirm Password*</label>
         <div class="input-group">
           <span class="input-group-text">
             <i class="bi bi-lock-fill"></i>

@@ -13,7 +13,7 @@ namespace ClubberTV.Core.Entities
         public required string Title { get; set; }
         public required string Competition { get; set; }
         public DateTime Date { get; set; }
-        public Status Status { get; set; }
+        public int Status { get; set; }
         public int Duration { get; set; }
         public ICollection<User> Users { get; set; } = new List<User>();
     }

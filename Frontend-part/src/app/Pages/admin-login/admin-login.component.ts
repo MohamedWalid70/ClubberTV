@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginEnableService } from '../../services/LoginEnable/login-enable.service';
-import { SigningService } from '../../services/SigningService/signing.service';
-import { LoginUser } from '../../Interfaces/LoginUser';
+import { LoginEnableService } from '../../services/auth-services/login-enable/login-enable.service';
+import { SigningService } from '../../services/auth-services/signing-service/signing.service';
+import { LoggedinUser } from '../../Interfaces/LoggedinUser';
 // import { NavbarComponent } from '../../Components/navbar/navbar.component';
-import { AdminAuthService } from '../../services/adminAuthService/admin-auth.service';
+import { AdminAuthService } from '../../services/auth-services/admin-auth-service/admin-auth.service';
 
 @Component({
   selector: 'app-admin-login',
@@ -46,25 +46,26 @@ export class AdminLoginComponent {
     if (this.loginForm.valid) {
         this.isLoading = true;
   
-        const loginAdmin: LoginUser = {
+        const loginAdmin: LoggedinUser = {
           email: this.loginForm.value.email,
           password: this.loginForm.value.password,
-          rememberMe: this.loginForm.value.rememberMe
         };
   
-        this._signingService.login(loginAdmin).subscribe({
+        this._signingService.loginAdmin(loginAdmin).subscribe({
 
           next: (response) => {
-            alert(`Welcome ${response?.user?.username}`);
-            localStorage.setItem('token', response?.token);
-            localStorage.setItem('username', response?.user?.username);
-            localStorage.setItem('userId', response?.user?.id);
-            this._LoginEnableService.setLoginEnabled(true);
-            setTimeout(() => {
-              this.isLoading = false;
-              this.router.navigate(['/dashboard']);
-              this._adminAuthService.setIsAdminLoggedIn(true);
-            }, 1000);
+            if(response?.status === 200) {
+              alert(`Welcome ${response?.body?.name}`);
+              localStorage.setItem('token', response?.body?.token);
+              localStorage.setItem('name', response?.body?.name);
+
+              this._LoginEnableService.setLoginEnabled(true);
+              setTimeout(() => {
+                this.isLoading = false;
+                this._adminAuthService.setIsAdminLoggedIn(true);
+                this.router.navigate(['/dashboard']);
+              }, 1000);
+            }
           },
           error: (response) => {
             alert("Invalid Credentials");

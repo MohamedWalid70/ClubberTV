@@ -6,11 +6,6 @@ import { provideRouter, RouterModule } from '@angular/router';
 import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent,
-{
-  providers:[
-    provideHttpClient(),
-    provideRouter(routes),
-  ]
-}
+  appConfig
 
   ).catch(err => console.error(err));

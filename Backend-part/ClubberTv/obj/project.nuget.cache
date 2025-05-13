@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZyJ9zVVJRz8=",
+  "dgSpecHash": "J+KOMnKJHSs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MW-PC\\source\\repos\\HiringQuest\\ClubberTv\\ClubberTV.csproj",
+  "projectFilePath": "G:\\Projects\\Full-ClubberTv\\Backend-part\\ClubberTv\\ClubberTV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MW-PC\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\MW-PC\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

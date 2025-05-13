@@ -14,6 +14,6 @@ namespace ClubberTV.Core.Entities
         public required string Title { get; set; }
 
         [MaxLength(40, ErrorMessage = "Input exceeded the allowed length"), StringLength(40)]
-        public string? Competition { get; set; }
+        public required string Competition { get; set; }
     }
 }

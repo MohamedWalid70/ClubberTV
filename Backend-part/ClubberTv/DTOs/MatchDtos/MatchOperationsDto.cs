@@ -18,7 +18,7 @@ namespace ClubberTV.DTOs.MatchDtos
         public DateTime Date { get; set; }
 
         [Required(ErrorMessage = "")]
-        public Status Status { get; set; }
+        public int Status { get; set; }
 
         [Required(ErrorMessage = "")]
         public int Duration { get; set; }

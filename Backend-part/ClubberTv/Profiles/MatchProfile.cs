@@ -10,7 +10,7 @@ namespace ClubberTV.Profiles
         {
             CreateMap<AddedMatchDto, Match>();
             CreateMap<MatchOperationsDto, Match>();
-            CreateMap<Match, MatchResponseDto>();
+            CreateMap<Match, MatchOperationsDto>();
         }
     }
 }
